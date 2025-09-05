@@ -1,62 +1,77 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Coffee, Users, Award } from "lucide-react";
+import { Leaf, Zap, Globe, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import aboutImage from "@/assets/about-coffee-interior.jpg";
 
 const About = () => {
-  const features = [
+  const values = [
     {
-      icon: <Heart className="h-8 w-8 text-coffee-medium" />,
-      title: "Made with Love",
-      description: "Every cup is crafted with passion and attention to detail, bringing you the warmth of home."
+      icon: <Leaf className="h-8 w-8 text-coffee-medium" />,
+      title: "Sustainable Sourcing",
+      description: "Direct partnerships with ethical coffee farmers ensure fair trade and environmental responsibility."
     },
     {
-      icon: <Coffee className="h-8 w-8 text-coffee-medium" />,
-      title: "Premium Beans",
-      description: "We source the finest coffee beans from across India and the world, roasted to perfection."
+      icon: <Zap className="h-8 w-8 text-coffee-medium" />,
+      title: "Artisan Craftsmanship",
+      description: "Master baristas with decades of experience create each cup with precision and artistic flair."
     },
     {
-      icon: <Users className="h-8 w-8 text-coffee-medium" />,
-      title: "Community Hub",
-      description: "A welcoming space where Delhi's coffee lovers gather to connect, work, and unwind."
+      icon: <Globe className="h-8 w-8 text-coffee-medium" />,
+      title: "Global Flavors",
+      description: "Curated coffee experiences from Ethiopian highlands to Colombian mountains, all in Hyderabad."
     },
     {
-      icon: <Award className="h-8 w-8 text-coffee-medium" />,
-      title: "Award Winning",
-      description: "Recognized as one of Delhi's best coffee shops for three consecutive years."
+      icon: <Shield className="h-8 w-8 text-coffee-medium" />,
+      title: "Quality Promise",
+      description: "Every bean is carefully selected, roasted fresh daily, and served with unwavering quality standards."
     }
   ];
 
   return (
     <section id="about" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-coffee-dark mb-6">
-            Our Story
-          </h2>
-          <p className="text-lg text-coffee-medium max-w-3xl mx-auto leading-relaxed">
-            Born in the bustling streets of Delhi, Café Warmth began as a dream to create 
-            a sanctuary where tradition meets innovation. Our cozy corner has become a beloved 
-            gathering place for coffee enthusiasts, remote workers, and friends seeking 
-            authentic connection over exceptional coffee.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-coffee-dark mb-6">
+              Where Coffee Dreams Come True
+            </h2>
+            <p className="text-lg text-coffee-medium leading-relaxed mb-6">
+              Nestled in the heart of Hyderabad, our café is more than just a coffee shop – 
+              it's a cultural melting pot where innovation meets tradition. Since opening our doors, 
+              we've been committed to creating an extraordinary coffee experience that awakens 
+              your senses and nourishes your soul.
+            </p>
+            <p className="text-lg text-coffee-medium leading-relaxed">
+              From our signature blends to handcrafted pastries, every element is designed to 
+              transport you to a world of comfort, creativity, and connection. Welcome to your 
+              new favorite escape.
+            </p>
+          </div>
+          <div className="order-first lg:order-last">
+            <img 
+              src={aboutImage} 
+              alt="Cozy coffee shop interior with warm lighting and comfortable seating"
+              className="rounded-2xl shadow-warm w-full h-auto object-cover"
+            />
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+          {values.map((value, index) => (
             <Card 
               key={index} 
               className="bg-cream/80 backdrop-blur-sm border-coffee-light/30 hover:shadow-warm transition-all duration-300 hover:-translate-y-2 cursor-move"
             >
               <CardContent className="p-8 text-center">
                 <div className="flex justify-center mb-4">
-                  {feature.icon}
+                  {value.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-coffee-dark mb-3">
-                  {feature.title}
+                  {value.title}
                 </h3>
                 <p className="text-coffee-medium leading-relaxed">
-                  {feature.description}
+                  {value.description}
                 </p>
               </CardContent>
             </Card>
@@ -70,7 +85,7 @@ const About = () => {
               size="lg"
               aria-label="Read our complete story"
             >
-              Read Our Complete Story
+              Discover Our Journey
             </Button>
           </Link>
         </div>
