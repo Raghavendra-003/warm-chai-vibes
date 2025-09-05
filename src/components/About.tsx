@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Heart, Coffee, Users, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const features = [
@@ -59,6 +61,18 @@ const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link to="/our-story">
+            <Button 
+              variant="warm" 
+              size="lg"
+              aria-label="Read our complete story"
+            >
+              Read Our Complete Story
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

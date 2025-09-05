@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Star } from "lucide-react";
 import heroImage from "@/assets/coffee-shop-hero.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -27,22 +28,26 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              variant="warm" 
-              size="lg" 
-              className="group"
-              aria-label="Explore our coffee and food menu"
-            >
-              Explore Our Menu
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button 
-              variant="cream" 
-              size="lg"
-              aria-label="Visit our café location in Delhi"
-            >
-              Visit Our Café
-            </Button>
+            <a href="#menu">
+              <Button 
+                variant="warm" 
+                size="lg" 
+                className="group"
+                aria-label="Explore our coffee and food menu"
+              >
+                Explore Our Menu
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button 
+                variant="cream" 
+                size="lg"
+                aria-label="Visit our café location in Delhi"
+              >
+                Visit Our Café
+              </Button>
+            </a>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 text-cream/80">
