@@ -26,9 +26,9 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Location</h3>
                     <p className="text-cream/90 leading-relaxed">
-                      123 Coffee Street, Connaught Place<br />
-                      New Delhi, Delhi 110001<br />
-                      Near Metro Station, Central Delhi
+                      Road No: 2 coffee street, RK Nagar, Nagole<br />
+                      Hyderabad Telangana 500068<br />
+                      Near By Thattianaram, bandlaguda depo
                     </p>
                   </div>
                 </div>
