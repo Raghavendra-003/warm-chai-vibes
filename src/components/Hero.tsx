@@ -27,11 +27,20 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="warm" size="lg" className="group">
+            <Button 
+              variant="warm" 
+              size="lg" 
+              className="group"
+              aria-label="Explore our coffee and food menu"
+            >
               Explore Our Menu
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="cream" size="lg">
+            <Button 
+              variant="cream" 
+              size="lg"
+              aria-label="Visit our café location in Delhi"
+            >
               Visit Our Café
             </Button>
           </div>

@@ -13,16 +13,39 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-coffee-medium hover:text-coffee-dark transition-colors">
+            <a 
+              href="#home" 
+              className="text-coffee-medium hover:text-coffee-dark transition-colors"
+              aria-label="Go to home section"
+            >
               Home
             </a>
-            <a href="#about" className="text-coffee-medium hover:text-coffee-dark transition-colors">
+            <a 
+              href="#about" 
+              className="text-coffee-medium hover:text-coffee-dark transition-colors"
+              aria-label="Learn about our café"
+            >
               About
             </a>
-            <a href="#menu" className="text-coffee-medium hover:text-coffee-dark transition-colors">
+            <a 
+              href="/our-story" 
+              className="text-coffee-medium hover:text-coffee-dark transition-colors"
+              aria-label="Read our complete story"
+            >
+              Our Story
+            </a>
+            <a 
+              href="#menu" 
+              className="text-coffee-medium hover:text-coffee-dark transition-colors"
+              aria-label="View our menu"
+            >
               Menu
             </a>
-            <a href="#contact" className="text-coffee-medium hover:text-coffee-dark transition-colors">
+            <a 
+              href="#contact" 
+              className="text-coffee-medium hover:text-coffee-dark transition-colors"
+              aria-label="Contact us"
+            >
               Contact
             </a>
           </nav>

@@ -44,7 +44,7 @@ const About = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="bg-cream/80 backdrop-blur-sm border-coffee-light/30 hover:shadow-warm transition-all duration-300 hover:-translate-y-2"
+              className="bg-cream/80 backdrop-blur-sm border-coffee-light/30 hover:shadow-warm transition-all duration-300 hover:-translate-y-2 cursor-move"
             >
               <CardContent className="p-8 text-center">
                 <div className="flex justify-center mb-4">
